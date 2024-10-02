@@ -1,0 +1,28 @@
+'''
+[16,21,11,8,12,22] -> Merge Sort
+
+Yukarıdaki dizinin sort türüne göre aşamalarını yazınız.
+Big-O gösterimini yazınız.
+'''
+
+[16, 21, 11, 8, 12, 22]
+   [16, 21, 11]  [8, 12, 22]
+   [16, 21] [11]  [8, 12] [22]
+   [16] [21] [11]  [8] [12] [22]
+
+[16] [21] -> [16, 21]
+   [11]  -> [11]
+   [8] [12] -> [8, 12]
+   [22] -> [22]
+
+[16, 21] [11] -> [11, 16, 21]
+   [8, 12] [22] -> [8, 12, 22]
+
+[11, 16, 21] [8, 12, 22] -> [8, 11, 12, 16, 21, 22]
+
+Big-O Gösterimi:
+
+Merge Sort'un Big-O gösterimi O(n log n)'dir. Bu, hem en kötü durumda hem de ortalama durumda geçerlidir. Logaritmik bölme ve doğrusal birleştirme işlemlerinden kaynaklanır.
+
+    n: Dizinin boyutu
+    log n: Bölme adımlarının sayısı
